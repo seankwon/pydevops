@@ -8,8 +8,11 @@ WORKDIR /app
 
 
 RUN mkdir src
-COPY ./requirements.txt .
-COPY ./src ./src
+COPY ./app/requirements.txt .
+COPY ./app/src ./src
+
+RUN ls
+RUN ls src
 
 RUN apt-get update && \
     apt-get -y install gcc mono-mcs
